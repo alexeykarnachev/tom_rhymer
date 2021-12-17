@@ -1,0 +1,3 @@
+more_itertools==8.12.0
+orjson==3.6.5
+pymorphy2[fast]==0.9.1
