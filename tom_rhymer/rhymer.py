@@ -9,16 +9,29 @@ from typing import Sequence, Set
 import orjson
 import pkg_resources
 import tqdm
-from pymorphy2 import MorphAnalyzer
+from pymorphy3 import MorphAnalyzer
 from russian_g2p.Grapheme2Phoneme import Grapheme2Phoneme
 
 from tom_rhymer.tree import Tree
 
-_RHYMER_FILE_PATH = pkg_resources.resource_filename('tom_rhymer', 'data/rhymer.pkl')
+_RHYMER_FILE_PATH = pkg_resources.resource_filename("tom_rhymer", "data/rhymer.pkl")
 
 _morph = MorphAnalyzer()
 _g2p = Grapheme2Phoneme()
-_STRESS_PHONEMES = {'U0', 'O0', 'A0', 'E0', 'Y0', 'I0', 'U0l', 'O0l', 'A0l', 'E0l', 'Y0l', 'I0l'}
+_STRESS_PHONEMES = {
+    "U0",
+    "O0",
+    "A0",
+    "E0",
+    "Y0",
+    "I0",
+    "U0l",
+    "O0l",
+    "A0l",
+    "E0l",
+    "Y0l",
+    "I0l",
+}
 
 
 @dataclass
@@ -29,15 +42,17 @@ class Word:
     def __hash__(self):
         return id(self.word)
 
-    def __eq__(self, rhs: 'Word'):
+    def __eq__(self, rhs):
         return self.word == rhs.word
 
     def __post_init__(self):
-        if '+' not in self.word:
-            raise ValueError(f'Word {self.word} in not stressed. `+` sign must be present.')
+        if "+" not in self.word:
+            raise ValueError(
+                f"Word {self.word} in not stressed. `+` sign must be present."
+            )
 
     def __str__(self):
-        return re.sub(r'\++', '', self.word)
+        return re.sub(r"\++", "", self.word)
 
 
 class Rhymer:
@@ -63,34 +78,36 @@ class Rhymer:
 
     def train(self, word_phonemes_file_path, allowed_words):
         with open(word_phonemes_file_path) as inp_file:
-            for line in tqdm.tqdm(inp_file, desc='Training'):
+            for line in tqdm.tqdm(inp_file, desc="Training"):
                 data = orjson.loads(line)
-                base_word = re.sub(r'\++', '', data['word'])
+                base_word = re.sub(r"\++", "", data["word"])
                 if allowed_words and base_word not in allowed_words:
                     continue
-                word = Word(word=data['word'], roots=set(data['roots']))
-                left_phonemes, right_phonemes = _get_phonemes_signatures(data['phonemes'])
+                word = Word(word=data["word"], roots=set(data["roots"]))
+                left_phonemes, right_phonemes = _get_phonemes_signatures(
+                    data["phonemes"]
+                )
                 self._left_tree.add(left_phonemes, word)
                 self._right_tree.add(right_phonemes, word)
                 self._words.append(word)
 
     def save(self, out_file_path):
-        with open(out_file_path, 'wb') as out_file:
+        with open(out_file_path, "wb") as out_file:
             pickle.dump(self, out_file)
 
     @staticmethod
-    def load(file_path=None) -> 'Rhymer':
+    def load(file_path=None) -> "Rhymer":
         file_path = file_path or _RHYMER_FILE_PATH
-        with open(file_path, 'rb') as inp_file:
+        with open(file_path, "rb") as inp_file:
             obj = pickle.load(inp_file)
             assert obj.__class__ == Rhymer
             return obj
 
     def _get_rhymes(
-            self,
-            word: Word,
-            min_n_matches,
-            max_n_skips,
+        self,
+        word: Word,
+        min_n_matches,
+        max_n_skips,
     ):
         phonemes = _g2p.word_to_phonemes(word.word)
         left_phonemes, right_phonemes = _get_phonemes_signatures(phonemes)
@@ -176,9 +193,9 @@ class Rhymer:
         for params in self._DEFAULT_PARAMS:
             min_n_matches, max_n_skips = params
             for rhyme in self._get_rhymes(
-                    word=word,
-                    min_n_matches=min_n_matches,
-                    max_n_skips=max_n_skips,
+                word=word,
+                min_n_matches=min_n_matches,
+                max_n_skips=max_n_skips,
             ):
                 pos = _morph.parse(str(rhyme))[0].tag.POS
                 if (rhyme.roots & seen_roots) or (pos == prev_pos):
@@ -193,7 +210,7 @@ def _get_phonemes_signatures(phonemes):
         if phoneme in _STRESS_PHONEMES:
             break
     if stress_idx is None:
-        raise ValueError(f'Stress phoneme is missed: {phonemes}')
-    left = phonemes[:stress_idx + 1][::-1]
+        raise ValueError(f"Stress phoneme is missed: {phonemes}")
+    left = phonemes[: stress_idx + 1][::-1]
     right = phonemes[stress_idx:]
     return left, right
