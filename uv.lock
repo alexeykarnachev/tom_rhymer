@@ -1,0 +1,116 @@
+version = 1
+requires-python = ">=3.13"
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
+]
+
+[[package]]
+name = "dawg-python"
+version = "0.7.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b8/33/fd52c8ec329641a7730fad662ba3f29f98c45e4bea552cceee569b00c915/DAWG-Python-0.7.2.tar.gz", hash = "sha256:4a5e3286e6261cca02f205cfd5516a7ab10190fa30c51c28d345808f595e3421", size = 9007 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6a/84/ff1ce2071d4c650ec85745766c0047ccc3b5036f1d03559fd46bb38b5eeb/DAWG_Python-0.7.2-py2.py3-none-any.whl", hash = "sha256:4941d5df081b8d6fcb4597e073a9f60d5c1ccc9d17cd733e8744d7ecfec94ef3", size = 11711 },
+]
+
+[[package]]
+name = "more-itertools"
+version = "10.5.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/51/78/65922308c4248e0eb08ebcbe67c95d48615cc6f27854b6f2e57143e9178f/more-itertools-10.5.0.tar.gz", hash = "sha256:5482bfef7849c25dc3c6dd53a6173ae4795da2a41a80faea6700d9f5846c5da6", size = 121020 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/48/7e/3a64597054a70f7c86eb0a7d4fc315b8c1ab932f64883a297bdffeb5f967/more_itertools-10.5.0-py3-none-any.whl", hash = "sha256:037b0d3203ce90cca8ab1defbbdac29d5f993fc20131f3664dc8d6acfa872aef", size = 60952 },
+]
+
+[[package]]
+name = "orjson"
+version = "3.10.12"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e0/04/bb9f72987e7f62fb591d6c880c0caaa16238e4e530cbc3bdc84a7372d75f/orjson-3.10.12.tar.gz", hash = "sha256:0a78bbda3aea0f9f079057ee1ee8a1ecf790d4f1af88dd67493c6b8ee52506ff", size = 5438647 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1b/bb/3f560735f46fa6f875a9d7c4c2171a58cfb19f56a633d5ad5037a924f35f/orjson-3.10.12-cp313-cp313-macosx_10_15_x86_64.macosx_11_0_arm64.macosx_10_15_universal2.whl", hash = "sha256:47962841b2a8aa9a258b377f5188db31ba49af47d4003a32f55d6f8b19006543", size = 248662 },
+    { url = "https://files.pythonhosted.org/packages/a3/df/54817902350636cc9270db20486442ab0e4db33b38555300a1159b439d16/orjson-3.10.12-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6334730e2532e77b6054e87ca84f3072bee308a45a452ea0bffbbbc40a67e296", size = 126055 },
+    { url = "https://files.pythonhosted.org/packages/2e/77/55835914894e00332601a74540840f7665e81f20b3e2b9a97614af8565ed/orjson-3.10.12-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:accfe93f42713c899fdac2747e8d0d5c659592df2792888c6c5f829472e4f85e", size = 131507 },
+    { url = "https://files.pythonhosted.org/packages/33/9e/b91288361898e3158062a876b5013c519a5d13e692ac7686e3486c4133ab/orjson-3.10.12-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:a7974c490c014c48810d1dede6c754c3cc46598da758c25ca3b4001ac45b703f", size = 131686 },
+    { url = "https://files.pythonhosted.org/packages/b2/15/08ce117d60a4d2d3fd24e6b21db463139a658e9f52d22c9c30af279b4187/orjson-3.10.12-cp313-cp313-musllinux_1_2_armv7l.whl", hash = "sha256:3f250ce7727b0b2682f834a3facff88e310f52f07a5dcfd852d99637d386e79e", size = 415710 },
+    { url = "https://files.pythonhosted.org/packages/71/af/c09da5ed58f9c002cf83adff7a4cdf3e6cee742aa9723395f8dcdb397233/orjson-3.10.12-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:f31422ff9486ae484f10ffc51b5ab2a60359e92d0716fcce1b3593d7bb8a9af6", size = 142305 },
+    { url = "https://files.pythonhosted.org/packages/17/d1/8612038d44f33fae231e9ba480d273bac2b0383ce9e77cb06bede1224ae3/orjson-3.10.12-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:5f29c5d282bb2d577c2a6bbde88d8fdcc4919c593f806aac50133f01b733846e", size = 130815 },
+    { url = "https://files.pythonhosted.org/packages/67/2c/d5f87834be3591555cfaf9aecdf28f480a6f0b4afeaac53bad534bf9518f/orjson-3.10.12-cp313-none-win32.whl", hash = "sha256:f45653775f38f63dc0e6cd4f14323984c3149c05d6007b58cb154dd080ddc0dc", size = 143664 },
+    { url = "https://files.pythonhosted.org/packages/6a/05/7d768fa3ca23c9b3e1e09117abeded1501119f1d8de0ab722938c91ab25d/orjson-3.10.12-cp313-none-win_amd64.whl", hash = "sha256:229994d0c376d5bdc91d92b3c9e6be2f1fbabd4cc1b59daae1443a46ee5e9825", size = 134944 },
+]
+
+[[package]]
+name = "pymorphy3"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "dawg-python" },
+    { name = "pymorphy3-dicts-ru" },
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/df/fd/d9f54e7053986ebfa1ef0b7aff831b51a2c5e0144285c46c7664f2b7b470/pymorphy3-2.0.2.tar.gz", hash = "sha256:5192660028a0bfdf33ff19e827b73d6467dea32be87ad0faae9f2425e40d701c", size = 97184 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/96/9b/3bb2abf52d890aac2d86198aa5868323f88ac4f29a93443796411401fae5/pymorphy3-2.0.2-py3-none-any.whl", hash = "sha256:5c4534e09e424c765a69601b5cc3735080dfafed15105961b3c16616793891d0", size = 53811 },
+]
+
+[[package]]
+name = "pymorphy3-dicts-ru"
+version = "2.4.417150.4580142"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ba/13/02ffe6893a777add5c8a43f212f31a3f6a03e7d44a484cf7b5ac5381fddb/pymorphy3-dicts-ru-2.4.417150.4580142.tar.gz", hash = "sha256:39ab379d4ca905bafed50f5afc3a3de6f9643605776fbcabc4d3088d4ed382b0", size = 8381569 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/67/469e9e52d046863f5959928794d3067d455a77f580bf4a662630a43eb426/pymorphy3_dicts_ru-2.4.417150.4580142-py2.py3-none-any.whl", hash = "sha256:718bac64c73c10c16073a199402657283d9b64c04188b694f6d3e9b0d85440f4", size = 8442043 },
+]
+
+[[package]]
+name = "russian-g2p"
+version = "1.1.0"
+source = { git = "https://github.com/nsu-ai/russian_g2p?rev=2030552#20305523bfe4ccb632c7538e9a5e925bde54b52e" }
+
+[[package]]
+name = "setuptools"
+version = "75.8.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/92/ec/089608b791d210aec4e7f97488e67ab0d33add3efccb83a056cbafe3a2a6/setuptools-75.8.0.tar.gz", hash = "sha256:c5afc8f407c626b8313a86e10311dd3f661c6cd9c09d4bf8c15c0e11f9f2b0e6", size = 1343222 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/69/8a/b9dc7678803429e4a3bc9ba462fa3dd9066824d3c607490235c6a796be5a/setuptools-75.8.0-py3-none-any.whl", hash = "sha256:e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3", size = 1228782 },
+]
+
+[[package]]
+name = "tom-rhymer"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "more-itertools" },
+    { name = "orjson" },
+    { name = "pymorphy3" },
+    { name = "russian-g2p" },
+    { name = "tqdm" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "more-itertools", specifier = "==10.5.0" },
+    { name = "orjson", specifier = "==3.10.12" },
+    { name = "pymorphy3", specifier = "==2.0.2" },
+    { name = "russian-g2p", git = "https://github.com/nsu-ai/russian_g2p?rev=2030552" },
+    { name = "tqdm", specifier = "==4.67.1" },
+]
+
+[[package]]
+name = "tqdm"
+version = "4.67.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2", size = 78540 },
+]
