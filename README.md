@@ -27,6 +27,8 @@ word = random.choice(rhymer.words)
 seen_words = [word]
 for _ in range(8):
     rhymes = rhymer.get_rhymes(seen_words)
+    if not rhymes: break
+
     rhyme = random.choice(rhymes)
     seen_words.append(rhyme)
 

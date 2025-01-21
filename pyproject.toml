@@ -22,6 +22,10 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["tom_chat"]
 
+[tool.hatch.build]
+only-packages = true
+artifacts = ["tom_rhymer/data/**/*"]
+
 [tool.uv.sources]
 russian-g2p = { git = "https://github.com/nsu-ai/russian_g2p", rev = "2030552" }
 
