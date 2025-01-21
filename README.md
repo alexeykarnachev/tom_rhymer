@@ -2,6 +2,13 @@
 Library for Russian imprecise rhymes generation.
 
 ## Quick Start
+Install using [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+```bash
+uv sync
+```
+
+
 Generate rhymes by any given rhyme scheme (`aabb`, `abab`, `aaccbb`, etc ...):
 ```python
 from tom_rhymer.rhymer import Rhymer
